@@ -6,7 +6,7 @@ VERSION="${1:-v$(date +%Y%m%d)}"
 echo "[*] Tagging release: $VERSION"
 make docker
 
-# Met à jour RELEASE.md avec $VERSION en début de fichier pour que le changelog soit à jour dans la release GitHub
+# Update RELEASE.md with $VERSION at the top so the changelog is up to date in the GitHub release
 echo "# Release $VERSION" > RELEASE.md
 
 git add -A
@@ -15,4 +15,4 @@ git commit -m "release: $VERSION" || true
 git tag "$VERSION"
 git push origin "$VERSION"
 
-echo "[OK] Release $VERSION pushed — workflow déclenché"
+echo "[OK] Release $VERSION pushed — workflow triggered"

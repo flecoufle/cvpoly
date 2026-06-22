@@ -1,30 +1,70 @@
-# CV Polyglotte
+# CV Polyglot
 
 [![Build](https://github.com/flecoufle/cvpoly/actions/workflows/compile.yml/badge.svg)](https://github.com/flecoufle/cvpoly/actions/workflows/compile.yml)
 [![Validate](https://github.com/flecoufle/cvpoly/actions/workflows/validate.yml/badge.svg)](https://github.com/flecoufle/cvpoly/actions/workflows/validate.yml)
 [![Release](https://img.shields.io/github/v/release/flecoufle/cvpoly)](https://github.com/flecoufle/cvpoly/releases)
-[![Docker](https://img.shields.io/badge/docker-ready-2496ED?logo=docker)](https://github.com/flecoufle/cvpoly/pkgs/container/cvpoly)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-CV **data-driven** généré depuis `cv.json` — source de vérité unique.
+**Data-driven** CV generator — edit `cv.json`, get two professionally typeset PDFs (ModernCV + AltaCV), versioned and delivered via GitHub Releases.
 
-## Principe
+## How it works
 
-Une seule édition dans `cv.json` → deux PDF automatiquement compilés
-(ModernCV + AltaCV), versionnés et livrés via GitHub Releases.
+A single source of truth (`cv.json`) is processed by a pure-Python generator (stdlib only, zero external dependencies) into LaTeX source, then compiled to PDF via Docker.
 
 ## Workflow
 
 ```sh
-make docker          # build dans Docker (reproductible)
+make docker          # Docker build (reproducible, no local LaTeX needed)
 make all             # generate + moderncv + altacv
-make validate        # valide cv.json
+make validate        # validate cv.json
 make generate        # cv.json → build/*.tex
-./release.sh         # build + tag + push → GitHub Release
+./release.sh         # build + tag + push → triggers GitHub Release
 ```
 
-L'infrastructure complète est visible dans le code source de ce dépôt :
-[JSON Schema](cv.schema.json), CI/CD, générateur Python (stdlib pure),
-classes LaTeX packagées, obfuscation anti-scraping.
+## Project structure
 
-Les PDFs finaux sont téléchargeables depuis les
-[Releases](https://github.com/flecoufle/cvpoly/releases).
+```
+cv.json              # Single source of truth (all CV data)
+cv.schema.json       # JSON Schema (IDE validation + CI)
+generate_cv.py       # LaTeX generator (stdlib, dataclasses)
+altacv.cls           # AltaCV class bundled in the repo
+Makefile             # Automated build workflow
+release.sh           # Release script (build + tag + push)
+LICENSE              # MIT License
+at.pdf               # @ symbol image (anti-scraping)
+picture.png          # Profile photo
+```
+
+## Outputs
+
+Two CV variants are compiled:
+
+| Variant | Engine | Style |
+|---------|--------|-------|
+| **ModernCV** | pdflatex | Classic, blue, sans-serif |
+| **AltaCV** | xelatex | Modern, two-column, serif headings |
+
+PDF filenames are auto-generated from the author name and build date (e.g. `John Doe 202606 mod.pdf`).
+
+## Security
+
+- CI/CD actions pinned by commit SHA
+- Restricted workflow permissions
+- No external Python dependencies
+- Email obfuscation via embedded `@` image to hinder scraping
+- `driver_license` field rendered conditionally
+
+## Validation
+
+JSON Schema validation runs on every push/PR via `.github/workflows/validate.yml`.
+
+## Built with
+
+- Python 3 (stdlib only — `json`, `dataclasses`, `re`)
+- LaTeX (ModernCV + AltaCV)
+- Docker (reproducible build environment)
+- GitHub Actions (CI/CD + Release automation)
+
+## License
+
+MIT — see [LICENSE](LICENSE).

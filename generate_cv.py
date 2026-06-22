@@ -468,7 +468,7 @@ def render_moderncv(data: CVData) -> str:
     a(r"\makecvtitle")
     a("")
 
-    # ── Expériences ──
+    # ── Experience ──
     a(r"\section{Expériences professionnelles}")
     for i, exp in enumerate(data.experience):
         if i > 0:
@@ -489,7 +489,7 @@ def render_moderncv(data: CVData) -> str:
         a(r"\cventry{{{}}}{{{}}}{{\company{{{}}}}}{{}}{{}}{{{}}}".format(dates_label, exp.role, exp.company, body))
     a("")
 
-    # ── Formations professionnelles ──
+    # ── Professional training ──
     if data.professional_education:
         a(r"\section{Formations professionnelles}")
         for pe in data.professional_education:
@@ -502,7 +502,7 @@ def render_moderncv(data: CVData) -> str:
             ))
         a("")
 
-    # ── Savoirs-faire ──
+    # ── Know-how ──
     if data.functional_skills:
         a(r"\section{Savoirs-faire}")
         for fs in data.functional_skills:
@@ -513,7 +513,7 @@ def render_moderncv(data: CVData) -> str:
             a(r"\cvitemwithcomment{{{}}}{{{}}}{{{}}}%".format(fs.category, fs.caption, comment))
         a("")
 
-    # ── Compétences techniques ──
+    # ── Technical skills ──
     if data.technical_skills:
         a(r"\section{Compétences techniques}")
         for ts in data.technical_skills:
@@ -525,7 +525,7 @@ def render_moderncv(data: CVData) -> str:
         a("")
 
 
-    # ── Formation initiale ──
+    # ── Education ──
     a(r"\section{Formation initiale}")
     for edu in data.initial_education:
         dates = ""
@@ -538,14 +538,14 @@ def render_moderncv(data: CVData) -> str:
         ))
     a("")
 
-    # ── Langues ──
+    # ── Languages ──
     if data.languages:
         a(r"\section{Langues}")
         for lg in data.languages:
             a(r"\cvitem{{{}}}{{{}}}".format(lg.language, lg.level))
         a("")
 
-    # ── Loisirs ──
+    # ── Hobbies ──
     if data.hobbies:
         a(r"\section{Loisirs}")
         for hb in data.hobbies:
@@ -637,7 +637,7 @@ def render_altacv(data: CVData) -> str:
     a(r"\begin{paracol}{2}")
     a("")
 
-    # ── LEFT COLUMN: Expériences ──
+    # ── LEFT COLUMN: Experience ──
     a(r"\cvsection{Expériences}")
     for i, exp in enumerate(data.experience):
         if i > 0:
@@ -662,7 +662,7 @@ def render_altacv(data: CVData) -> str:
     a(r"\switchcolumn")
     a("")
 
-    # Compétences
+    # Skills
     a(r"\cvsection{Compétences}")
     for cat in data.skills:
         a(r"\cvsubsection{{{}}}".format(cat.name))
@@ -671,7 +671,7 @@ def render_altacv(data: CVData) -> str:
     a("")
 
 
-    # Formations professionnelles
+    # Professional training
     if data.professional_education:
         a(r"\cvsection{Formations professionnelles}")
         for pe in data.professional_education:
@@ -689,7 +689,7 @@ def render_altacv(data: CVData) -> str:
         a("")
     a("")
 
-    # Formation initiale
+    # Education
     a(r"\cvsection{Formation initiale}")
     for edu in data.initial_education:
         dates = ""
