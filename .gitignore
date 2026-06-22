@@ -1,0 +1,6 @@
+build/
+out/
+*.pdf
+*.swp
+__pycache__/
+!at.pdf

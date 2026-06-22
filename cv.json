@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "version": "1.0",
+    "author": "François Lecoufle",
+    "last_updated": "2026-05-22"
+  },
+  "personal_info": {
+    "name": {
+      "first": "François",
+      "family": "Lecoufle"
+    },
+    "title": "Business Analyst -- Product Manager -- Consultant MOE {exp_years}+ ans d'expériences",
+    "career_start": "2005-08",
+    "phone": "....06.59.62.63.21",
+    "email": "flecoufle (at) gmail.com",
+    "address": "La Chapelle d'Armentières",
+    "birth_date": "1980",
+    "nationality": "française",
+    "driver_license": true,
+    "marital_status": "marié",
+    "github": "https://github.com/flecoufle",
+    "linkedin": "https://linkedin.com/in/flecoufle",
+    "photo": "picture.png"
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "Intelligence Artificielle",
+        "items": [
+          "GPT", "Claude", "Mistral", "Gemini",
+          "NotebookLM", "Roocode", "picoClaw", "OpenCode", "HuggingFace"
+        ]
+      },
+      {
+        "name": "Langages",
+        "items": [
+          "Python", "Javascript", "TypeScript", "Java", "Go","Perl",
+          "PL/SQL", "Shell/Awk", "C",
+          "PHP", "SQL"
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "items": [
+          "NodeJS", "Angular", "VueJS", "Node-RED"
+        ]
+      },
+      {
+        "name": "Outils / Systèmes",
+        "items": [
+          "Git", "GitLab", "Jenkins", "Docker", "Linux",
+          "Oracle", "MySql", "PostgreSQL"
+        ]
+      },
+      {
+        "name": "Méthodes",
+        "items": ["Agile/Scrum", "Kanban", "Cycle en V"]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Product Manager -- Consultant MOE",
+      "company": "ID Group / Okaïdi / Jacadi (Viveris Systèmes)",
+      "dates": { "start": "2021-01", "end": "2026-06" },
+      "summary": "Pilotage complet du Back Office logistique et de l'OMS OneStock : commandes, stock, colis. Responsable de l'orchestration de commandes pour 4 enseignes internationales.",
+      "highlights": [
+        "Construction et pilotage de l'OMS groupe (OneStock) : définition des règles de sourcing, allocation et priorisation des commandes, mise en place d'indicateurs de performance",
+        "Déploiement complet des parcours omnicanaux : Ship from Store, Collect from Store, Order in Store, Retrait en 2h",
+        "Migration d'Oxybul.fr dans le SI groupe : intégration complète de la marque dans l'écosystème Idkids",
+        "Gouvernance produit et pilotage transverse : analyse des besoins, cadrage, priorisation du backlog, spécifications fonctionnelles, qualification"
+      ],
+      "stack": ["SnowFlake", "OneStock", "Oracle", "Talend"]
+    },
+    {
+      "role": "Product Owner (Scrum)",
+      "company": "Norauto (Viveris Systèmes)",
+      "dates": { "start": "2020-03", "end": "2021-01" },
+      "summary": "Réalisation d'assistant sur le e-commerce.",
+      "highlights": [
+        "Construction du socle Web Components transverse",
+        "Refonte des outils commerce et omnicanal : besoins métiers, cadrage fonctionnel, user stories",
+        "Pilotage agile et qualité fonctionnelle : planification des sprints, backlog, qualification"
+      ],
+      "stack": ["NodeJS", "API REST", "TypeScript", "StencilJS", "Git", "GitLab"]
+    },
+    {
+      "role": "Chef de projet fonctionnel et technique",
+      "company": "BPCE (Viveris Systèmes)",
+      "dates": { "start": "2019-02", "end": "2020-02" },
+      "summary": "Portage national de l'application régionalisée de gestion des demandes et des réclamations des Banques Populaires, des Caisses d'Epargne et des filiales du groupe BPCE.",
+      "highlights": [
+        "Cadrage des besoins et lotissement pour un forfait 4000 JH",
+        "Ateliers d'expression de besoin, estimation des charges, rétro-documentation",
+        "Spécifications fonctionnelles et techniques détaillées"
+      ],
+      "stack": ["JavaScript/JQuery", "Bootstrap", "VB.Net", "SQL Server"]
+    },
+    {
+      "role": "Business Analyst",
+      "company": "Viveris Systèmes",
+      "dates": { "start": "2018-07", "end": "2019-01" },
+      "summary": "Elaboration d'outil de gestion des compétences.",
+      "highlights": [
+        "Analyse fonctionnelle : spécification fonctionnelle détaillée, MCD, User stories",
+        "Assistance technique et conception technique"
+      ],
+      "stack": ["Angular", "TypeScript", "JHipster", "Spring", "Git"]
+    },
+    {
+      "role": "Product Manager -- Business Analyst",
+      "company": "Kiabi (gfi informatique)",
+      "dates": { "start": "2014-06", "end": "2018-06" },
+      "summary": "Business analyst Agile/Scrum sur projet PLM, analyste fonctionnel applicatif décisionnel (MFP/Infor, Hyperion Planning), responsable de produits métiers.",
+      "highlights": [
+        "Business analyst (Agile/Scrum) sur application PLM : besoin, analyse, maquettes, pilotage centre de services J2EE",
+        "Analyste fonctionnel application MFP/Infor (prévisions d'achats 2 ans) : spécifications générales, pilotage équipes BI, recette",
+        "Analyste fonctionnel Hyperion Planning (élaboration budgétaire) : pilotage des consultants Hyperion/ODI",
+        "Responsable produit application gestion des opérations commerciales : besoin, pilotage TMA Roumanie",
+        "Responsable produit application analyse du positionnement prix : pilotage centre de services J2EE et équipe BI"
+      ],
+      "stack": ["Java", "Hyperion Planning", "Essbase", "Oracle PL/SQL", "Infor MFP", "BO", "Tableau"]
+    },
+    {
+      "role": "Expertise fonctionnelle et technique",
+      "company": "Kiloutou (gfi informatique)",
+      "dates": { "start": "2011-01", "end": "2014-05" },
+      "summary": "1ère Marketplace de Location professionnelle en France (Kiloutou.fr).",
+      "highlights": [
+        "Analyse et conception du back-office ECommerce : stocks, tarification, facturation",
+        "Réalisation de Web Services SOAP/REST avec orchestration via Oracle Service Bus (ESB)",
+        "Création d'applications Tablettes Android pour les commerciaux",
+        "Pilotage de la TMA pour le front-office Drupal"
+      ],
+      "stack": ["SOAP/REST", "Android", "Oracle PL/SQL", "Oracle Service Bus"]
+    },
+    {
+      "role": "Expertise fonctionnelle et technique",
+      "company": "Humanis (gfi informatique)",
+      "dates": { "start": "2009-07", "end": "2010-12" },
+      "summary": "Déploiement de l'Extranet Client.",
+      "highlights": [
+        "Réalisation de Web Services pour le suivi des remboursements et prélèvements",
+        "Maintenance des traitements existants de l'assurance prévoyance"
+      ],
+      "stack": ["Java", "ODI", "GeremiW"]
+    },
+    {
+      "role": "Expertise fonctionnelle et technique",
+      "company": "Kiloutou (gfi informatique)",
+      "dates": { "start": "2008-06", "end": "2009-06" },
+      "summary": "Amélioration des outils et des traitements du SI Commerce de Kiloutou.",
+      "highlights": [
+        "Développement de flux, traitements et IHM",
+        "Intégration de l'outil de redressement d'adresse QAS à l'ERP Locpro",
+        "Refonte du CRM"
+      ],
+      "stack": ["Oracle PL/SQL", "LocPRO", "QAS"]
+    },
+    {
+      "role": "Développeur",
+      "company": "Pimkie (gfi informatique)",
+      "dates": { "start": "2006-03", "end": "2008-05" },
+      "summary": "Conception et réalisation du back-office ECommerce de Pimkie.",
+      "highlights": [
+        "Développement de flux, traitements et interfaces",
+        "Déploiement de pimkie.com"
+      ],
+      "stack": ["Oracle PL/SQL", "PHP", "MySQL", "LAMP"]
+    },
+    {
+      "role": "Ingénieur système",
+      "company": "France Telecom (Atos Worldline)",
+      "dates": { "start": "2005-08", "end": "2006-02" },
+      "summary": "Réversibilité de la plate-forme de messagerie Wanadoo (Orange) pour réintégration au SI France Telecom.",
+      "highlights": [
+        "Support technique au déploiement d'un cœur de messagerie"
+      ],
+      "stack": ["Linux", "Shell", "Perl", "Awk"]
+    }
+  ],
+  "initial_education": [
+    {
+      "degree": "Diplôme d'Ingénieur en Sciences et Technologies de l'Information et de la Communication",
+      "school": "Institut Mines-Télécom (TELECOM Lille / IMT Lille Douai)",
+      "location": "Villeneuve d'Ascq",
+      "dates": { "start": "1999", "end": "2005" },
+      "details": "Options : Management de l'Innovation à la Conduite de Projets, Ingénierie des Logiciels Réseaux"
+    },
+    {
+      "degree": "Baccalauréat S -- mention Assez Bien",
+      "school": "Ozanam",
+      "location": "Lille",
+      "dates": { "start": "1999", "end": null },
+      "details": "Spécialité Mathématiques, Sciences de l'Ingénieur"
+    }
+  ],
+  "professional_education": [
+    {
+      "course": "Node-RED Advanced",
+      "organization": "FlowFuse -- Node-RED Academy",
+      "dates": { "start": "2025", "end": null }
+    },
+    {
+      "course": "Anglais niveau validé B1.3",
+      "organization": "Yes'n'You",
+      "dates": { "start": "2017", "end": null }
+    },
+    {
+      "course": "Formation Chef/Directeur de Projets (Agile Scrum) — 5 jours",
+      "organization": "gfi",
+      "location": "Saint-Ouen",
+      "dates": { "start": "2016", "end": null }
+    },
+    {
+      "course": "Formation à la conduite de Projets — 2 jours",
+      "organization": "gfi",
+      "location": "Lille",
+      "dates": { "start": "2015", "end": null }
+    },
+    {
+      "course": "Formation Oracle Hyperion Essbase — 5 jours",
+      "organization": "Nell'Armonia",
+      "location": "Levallois-Perret",
+      "dates": { "start": "2015", "end": null }
+    },
+    {
+      "course": "Formation Delphi — 2 jours",
+      "organization": "Dawan",
+      "location": "Paris",
+      "dates": { "start": "2011", "end": null }
+    },
+    {
+      "course": "Formation Oracle Tuning SQL — 2 jours",
+      "organization": "Oracle University",
+      "location": "Paris",
+      "dates": { "start": "2008", "end": null }
+    }
+  ],
+  "functional_skills": [
+    {
+      "category": "AMOA",
+      "caption": "analyse des contraintes métier",
+      "details": [
+        "modélisation des processus métier (flux, activités)",
+        "cadrage / spécifications générales",
+        "recette métier (PV de recette)"
+      ]
+    },
+    {
+      "category": "AMOE",
+      "caption": "pilotage des réalisations",
+      "details": [
+        "spécifications fonctionnelles détaillées",
+        "recette d'intégration",
+        "facilitateur AMOA/MOE"
+      ]
+    },
+    {
+      "category": "MOE",
+      "caption": "suivi opérationnel",
+      "details": [
+        "configuration applicative",
+        "structures et données",
+        "tests unitaires et développements"
+      ]
+    }
+  ],
+  "technical_skills": [
+    {
+      "left_name": "Langages",
+      "left_items": ["Python", "Javascript", "TypeScript", "Java", "Go","Perl",
+          "PL/SQL", "Shell/Awk", "C",
+          "PHP", "SQL"],
+      "right_name": "Réseau",
+      "right_items": ["TCP/IP", "HTTP", "DNS", "NFS", "SMB", "SNMP", "ICMP", "RIP", "ARP"]
+    },
+    {
+      "left_name": "Serveurs d'applications",
+      "left_items": ["J2EE", "JBoss", "Weblogic", "Apache/Tomcat"],
+      "right_name": "Données",
+      "right_items": ["UML", "Oracle", "PostgreSQL", "MySQL", "XML"]
+   
+    },
+    {
+      "left_name": "ECommerce",
+      "left_items": ["Drupal", "OSCommerce"],
+      "right_name": "Systèmes",
+      "right_items": ["Linux", "Debian/Ubuntu", "Red Hat/Fedora", "FreeBSD", "Docker"]
+    },
+    {
+      "left_name": "Outils",
+      "left_items": ["Git", "GitLab", "Jenkins"],
+      "right_name": "Logiciels",
+      "right_items": ["Oracle Hyperion Planning", "OneStock", "MFP", "PLM (Kiabi)", "LocPRO (Kiloutou)"]
+    },
+    {
+      "left_name": "Frameworks",
+      "left_items": ["NodeJS", "Angular", "VueJS", "Node-RED"],
+      "right_name": "Méthodes",
+      "right_items": ["Agile/Scrum", "Kanban", "Cycle en V"]
+    },
+    {
+      "left_name": "IA / LLM",
+      "left_items": ["GPT", "Claude", "Mistral", "Gemini"],
+      "right_name": "Agents / RAG",
+      "right_items": ["NotebookLM", "Roocode", "picoClaw", "OpenCode", "HuggingFace"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Anglais",
+      "level": "lu et écrit, TOEIC 755/990 (2005) --  niveau B1.3 (2017)"
+    }
+  ],
+  "hobbies": [
+    {
+      "activity": "Voyages",
+      "details": "Québec, Pays-Bas, Angleterre, Allemagne, Croatie, Italie, Espagne, Portugal"
+    },
+    {
+      "activity": "Sports",
+      "details": "natation, tennis"
+    }
+  ]
+}

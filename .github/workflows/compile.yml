@@ -1,0 +1,72 @@
+name: Build CVs
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      mod_name: ${{ steps.names.outputs.mod_name }}
+      alta_name: ${{ steps.names.outputs.alta_name }}
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - name: Compute filenames
+        id: names
+        run: |
+          author=$(python3 -c "import json; d=json.load(open('cv.json'))['personal_info']['name']; print(d['first']+' '+d['family'])")
+          date=$(date +%Y%m)
+          echo "mod_name=${author} ${date} mod.pdf" >> "$GITHUB_OUTPUT"
+          echo "alta_name=${author} ${date} alta.pdf" >> "$GITHUB_OUTPUT"
+
+      - name: Install Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            make \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-extra \
+            texlive-xetex \
+            latexmk \
+            fonts-lato \
+            fonts-roboto-slab
+
+      - name: Build CVs
+        run: make all
+
+      - name: Upload PDFs (artifacts)
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: cvs
+          path: |
+            ${{ steps.names.outputs.mod_name }}
+            ${{ steps.names.outputs.alta_name }}
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: cvs
+
+      - name: Create Release
+        uses: softprops/action-gh-release@718ea10b132b3b2eba29c1007bb80653f286566b # v3.0.1
+        with:
+          files: |
+            ${{ needs.build.outputs.mod_name }}
+            ${{ needs.build.outputs.alta_name }}
+          generate_release_notes: true

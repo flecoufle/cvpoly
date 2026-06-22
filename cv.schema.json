@@ -1,0 +1,188 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CV Data Schema",
+  "type": "object",
+  "required": ["meta", "personal_info", "skills", "experience"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["version", "author", "last_updated"],
+      "properties": {
+        "version": { "type": "string" },
+        "author": { "type": "string" },
+        "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      }
+    },
+    "personal_info": {
+      "type": "object",
+      "required": ["name", "title", "career_start"],
+      "properties": {
+        "name": {
+          "type": "object",
+          "required": ["first", "family"],
+          "properties": {
+            "first": { "type": "string" },
+            "family": { "type": "string" }
+          }
+        },
+        "title": { "type": "string" },
+        "career_start": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?$" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "birth_date": { "type": "string" },
+        "nationality": { "type": "string" },
+        "driver_license": { "type": "boolean" },
+        "marital_status": { "type": "string" },
+        "github": { "type": "string", "format": "uri" },
+        "linkedin": { "type": "string", "format": "uri" },
+        "photo": { "type": "string" }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "required": ["categories"],
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "items"],
+            "properties": {
+              "name": { "type": "string" },
+              "items": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "company", "dates"],
+        "properties": {
+          "role": { "type": "string" },
+          "company": { "type": "string" },
+          "dates": {
+            "type": "object",
+            "required": ["start"],
+            "properties": {
+              "start": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?$" },
+              "end": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2})?$" }
+            }
+          },
+          "summary": { "type": "string" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "stack": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "initial_education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["degree", "school"],
+        "properties": {
+          "degree": { "type": "string" },
+          "school": { "type": "string" },
+          "location": { "type": "string" },
+          "dates": {
+            "type": "object",
+            "required": ["start"],
+            "properties": {
+              "start": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?$" },
+              "end": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2})?$" }
+            }
+          },
+          "details": { "type": "string" }
+        }
+      }
+    },
+    "professional_education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["course", "organization"],
+        "properties": {
+          "course": { "type": "string" },
+          "organization": { "type": "string" },
+          "location": { "type": "string" },
+          "dates": {
+            "type": "object",
+            "required": ["start"],
+            "properties": {
+              "start": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?$" },
+              "end": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2})?$" }
+            }
+          }
+        }
+      }
+    },
+    "functional_skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "caption"],
+        "properties": {
+          "category": { "type": "string" },
+          "caption": { "type": "string" },
+          "details": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "technical_skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["left_name", "right_name"],
+        "properties": {
+          "left_name": { "type": "string" },
+          "left_items": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "right_name": { "type": "string" },
+          "right_items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["language"],
+        "properties": {
+          "language": { "type": "string" },
+          "level": { "type": "string" }
+        }
+      }
+    },
+    "hobbies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["activity"],
+        "properties": {
+          "activity": { "type": "string" },
+          "details": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+services:
+  cv:
+    build: .
+    volumes:
+      - .:/work
+    command: make all
