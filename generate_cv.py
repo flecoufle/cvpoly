@@ -441,6 +441,7 @@ def render_moderncv(data: CVData) -> str:
     a(r"\usepackage{fontawesome5}")
     a(r"\newcommand{\cvDateMarker}{\faCalendar[regular]}")
     a(r"\usepackage{qrcode}")
+    a(r"\microtypesetup{expansion=false}")
     a("")
     full_name = unescape_latex(pi.name["first"] + " " + pi.name["family"])
     raw_title = unescape_latex(pi.title)
@@ -642,6 +643,7 @@ def render_altacv(data: CVData) -> str:
     for i, exp in enumerate(data.experience):
         if i > 0:
             a(r"\divider")
+            a("")
         dates = format_date_range(exp.dates.start, exp.dates.end)
         duration = compute_duration(exp.dates.start, exp.dates.end)
         dates_label = f"{dates} ({duration})" if duration else dates
@@ -718,8 +720,10 @@ def render_altacv(data: CVData) -> str:
 
     # ── QR Code ──
     a(r"\cvsection{Références}")
+    a(r"\begin{center}")
     a(r"\qrcode[height=2cm]{" + repo_url + r"}\par")
     a(r"{\small \url{" + repo_url + r"}}")
+    a(r"\end{center}")
     a("")
 
     a(r"\end{paracol}")
