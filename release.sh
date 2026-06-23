@@ -13,6 +13,6 @@ git add -A
 git commit -m "release: $VERSION" || true
 
 git tag "$VERSION"
-git push origin "$VERSION"
+git push origin HEAD --tags
 
 echo "[OK] Release $VERSION pushed — workflow triggered"
